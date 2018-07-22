@@ -6,19 +6,11 @@ Created on Sat Jun  2 12:09:17 2018
 @author: mancx111
 """
 import numpy as np
-import time
 import json
 import argparse
 from keras.models import load_model
 
 
-#parser = argparse.ArgumentParser()
-#parser.add_argument("--model",help="model path",default='.')
-#parser.add_argument("--index",help="index path",default='./imagenet_class_index.json')
-#
-#
-#
-#args = parser.parse_args()
 
 
 
@@ -107,21 +99,18 @@ class Model_Evaluator(object):
         return result
         
             
-                
-###Your work
-##specify what is the input here
 
-#result={}
-#try:
-model = Model_Evaluator('./vgg16.h5','./imagenet_class_index.json')
-result = model.evaluate()
-print(result)
-#except Exception as exc:
-#    result['message']=exc.__str__()
-#
-#output=json.dumps(result)
-    
 
-##What is the output of the evaluate
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", help="model path", default='.')
+    parser.add_argument("--index", help="index path", default='./imagenet_class_index.json')
+    parser.add_argument("--AE_path", help="Directory of adversarial example", default="./image_final/")
+    args = parser.parse_args()               
+
+    model = Model_Evaluator(args.model, args.index, args.AE_path)
+    result = model.evaluate()
+    print(result)
+
         
     
