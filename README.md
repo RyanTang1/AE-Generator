@@ -1,4 +1,4 @@
-# Adversarial Image Generator
+# Adversarial Example Generator
 
 This project provides a pipeline from generating adversarial images from different attack methods to evaluate the accuracy from those methods. We use the implementation of [CleverHans](https://github.com/tensorflow/cleverhans#setting-up-cleverhans) library and use binary search to find the smallest peturbation that is needed to generate an adversarial example.
 
