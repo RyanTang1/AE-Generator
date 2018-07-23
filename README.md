@@ -7,7 +7,7 @@ to evaluate the robustness of their model. More details can be found there.
 
 ## Usage
 
-The script is originally writtin based on taking the input data like imageNet validation data. Therefore, running the script requires several inputs.
+The script is originally implemented based on taking the input data like imageNet validation data. Therefore, running the script requires several inputs.
 
 
 
